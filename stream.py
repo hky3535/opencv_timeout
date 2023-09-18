@@ -27,7 +27,7 @@ def capture(source, timeout): # capture with timeout (s)
     capture_timeout_thread.join(timeout)
     return capture_timeout_thread._stream
 
-def read(capture, timeout, event): # read with timeout (s) if event is True --> return frame; if False --> return False
+def read(capture, timeout, event): # read with timeout (s) 
 
     class ReadTimeout(threading.Thread):
         def __init__(self, _capture):
